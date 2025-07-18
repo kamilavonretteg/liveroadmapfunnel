@@ -201,10 +201,6 @@
                         <span id="totalGrossRevenue" class="font-bold text-lg results-value">$0.00</span>
                     </div>
                     <div class="flex justify-between items-center py-2 border-b border-blue-200">
-                        <span class="text-gray-700 font-medium">Total Net Revenue:</span>
-                        <span id="totalNetRevenue" class="font-bold text-lg results-value">$0.00</span>
-                    </div>
-                    <div class="flex justify-between items-center py-2 border-b border-blue-200">
                         <span class="text-gray-700 font-medium">Total Profit:</span>
                         <span id="totalProfit" class="font-bold text-lg">$0.00</span>
                     </div>
@@ -262,7 +258,7 @@
         const revenuePaymentPlanSpan = document.getElementById('revenuePaymentPlan');
         const revenueMiniOfferSpan = document.getElementById('revenueMiniOffer');
         const totalGrossRevenueSpan = document.getElementById('totalGrossRevenue');
-        const totalNetRevenueSpan = document.getElementById('totalNetRevenue');
+        const totalNetRevenueSpan = document.getElementById('totalNetRevenue'); // Removed from HTML, but kept in JS for calculation
         const totalProfitSpan = document.getElementById('totalProfit');
         const totalRoasSpan = document.getElementById('totalRoas');
 
@@ -434,7 +430,7 @@
             if (revenueMiniOfferSpan) { revenueMiniOfferSpan.textContent = formatCurrency(revenueMiniOffer); revenueMiniOfferSpan.classList.add('results-value'); }
 
             if (totalGrossRevenueSpan) { totalGrossRevenueSpan.textContent = formatCurrency(totalGrossRevenue); totalGrossRevenueSpan.classList.add('results-value'); }
-            if (totalNetRevenueSpan) { totalNetRevenueSpan.textContent = formatCurrency(totalNetRevenue); totalNetRevenueSpan.classList.add('results-value'); }
+            // totalNetRevenueSpan is removed from HTML, no need to update it
             styleProfit(totalProfitSpan, totalProfit);
             styleRoas(totalRoasSpan, totalRoas);
         }
